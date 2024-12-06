@@ -1,2 +1,2 @@
-# -_-
+#　Advanced_MathDataScience_ExamPrep
 C言語の試験対策
