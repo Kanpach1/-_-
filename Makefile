@@ -26,7 +26,7 @@ create:
 	if [ ! -f "$$C_FILE" ]; then \
 		echo "/*" > "$$C_FILE"; \
 		echo " * $$C_FILE" >> "$$C_FILE"; \
-		echo " * このファイルは $(N) のテンプレートです。" >> "$$C_FILE"; \
+		echo " * このファイルは $(N) です。" >> "$$C_FILE"; \
 		echo " */" >> "$$C_FILE"; \
 		echo "✅ $$C_FILE を生成しました。"; \
 	else \
