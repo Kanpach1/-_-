@@ -1,9 +1,27 @@
 {
+    "version": "2.0.0",
     "tasks": [
         {
-            "type": "cppbuild",
-            "label": "C/C++: gcc アクティブなファイルのビルド",
+            "label": "C/C++: gcc build active file",
+            "type": "shell",
             "command": "/usr/bin/gcc",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.exe",
+                "-lm"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Generated task by Debugger."
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: gcc-12 アクティブなファイルのビルド",
+            "command": "/usr/bin/gcc-12",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -23,6 +41,5 @@
             },
             "detail": "デバッガーによって生成されたタスク。"
         }
-    ],
-    "version": "2.0.0"
+    ]
 }
