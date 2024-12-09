@@ -54,8 +54,13 @@ build:
 		exit 1; \
 	fi; \
 	mkdir -p $(BIN_DIR); \
-	$(CC) $(CFLAGS) -o "$$EXEC_FILE" "$$C_FILE"; \
-	echo "✅ ビルド成功: $$EXEC_FILE"
+	$(CC) -o "$$EXEC_FILE" "$$C_FILE" $(CFLAGS); \
+	if [ -f "$$EXEC_FILE" ]; then \
+		echo "✅ ビルド成功: $$EXEC_FILE"; \
+	else \
+		echo "❌ ビルド失敗: $$EXEC_FILE"; \
+	fi
+
 
 # 実行ターゲット
 run:
